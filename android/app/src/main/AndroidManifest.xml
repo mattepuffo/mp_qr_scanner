@@ -2,10 +2,32 @@
 
     <uses-permission android:name="android.permission.CAMERA" />
 
+    <queries>
+        <!-- Per aprire link https -->
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:scheme="https" />
+        </intent>
+        <!-- Per aprire link http -->
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:scheme="http" />
+        </intent>
+        <!-- Per mailto e tel (opzionale ma consigliato) -->
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:scheme="mailto" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:scheme="tel" />
+        </intent>
+    </queries>
+
     <application
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher"
-        android:label="mp_qr_scanner">
+        android:icon="@mipmap/launcher_icon"
+        android:label="MP QR Scanner">
 
         <activity
             android:name=".MainActivity"
